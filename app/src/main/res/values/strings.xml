@@ -4,6 +4,12 @@
     <string name="user1">科学者</string>
     <string name="naiyou1">実験楽しいよ</string>
 
+
     <string name="user2">教師</string>
     <string name="naiyou2">テストは少なくします\n数学の授業は1日10分までとします\nその方がいいでしょ</string>
+
+    <string name="user3">俳優</string>
+    <string name="naiyou3">ドラマがメインでやってます\n睡眠は1日9時間以上\n見た目のケア大切</string>
+
+
 </resources>

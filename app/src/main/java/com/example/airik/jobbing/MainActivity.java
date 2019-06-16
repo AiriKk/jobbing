@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         mListView =(ListView)findViewById(R.id.listView);
         mArticles = new ArrayList<Article>();
 
-        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1)));
-        mArticles.add(new Article(getString(R.string.user2), getString(R.string.naiyou2)));
-        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1)));
-        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1)));
+        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1), R.drawable.star));
+        mArticles.add(new Article(getString(R.string.user2), getString(R.string.naiyou2), R.drawable.umi));
+//        mArticles.add(new Article(getString(R.string.user3), getString(R.string.naiyou3),R.drawable.ikemen));
+//        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1),R.drawable.star));
 
         mArticleAdapter = new ArticleAdapter(this,R.layout.article,mArticles);
         mListView.setAdapter(mArticleAdapter);

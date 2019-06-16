@@ -1,10 +1,12 @@
 package com.example.airik.jobbing;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -52,6 +54,13 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             //set data
             viewHolder.usernameT.setText(item.username);
             viewHolder.naiyouT.setText(item.naiyou);
+            viewHolder.iconIT.setImageResource(item.icon);
+            viewHolder.heart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorAccent));
+                }
+            });
         }
 
         return convertView;
@@ -61,11 +70,15 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
         TextView usernameT;
         TextView naiyouT;
+        ImageView iconIT;
+        public ImageView heart;
 
         public ViewHolder(View view){
 
             usernameT = (TextView)view.findViewById(R.id.username);
             naiyouT = (TextView)view.findViewById(R.id.naiyou);
+            iconIT = (ImageView)view.findViewById(R.id.icon);
+            heart = (ImageView)view.findViewById(R.id.Heart);
         }
 
     }
