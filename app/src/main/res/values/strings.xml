@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Jobbing</string>
 
-    <string name="科学者">Jobbing</string>
-    <string name="実験楽しいよ">Jobbing</string>
+    <string name="user1">科学者</string>
+    <string name="naiyou1">実験楽しいよ</string>
+
+    <string name="user2">教師</string>
+    <string name="naiyou2">テストは少なくします\n数学の授業は1日10分までとします\nその方がいいでしょ</string>
 </resources>
