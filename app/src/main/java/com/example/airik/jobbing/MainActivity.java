@@ -29,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
         mArticleAdapter = new ArticleAdapter(this,R.layout.article,mArticles);
         mListView.setAdapter(mArticleAdapter);
 
+        //TODO ListViewのOnItemClickListenerを実装！
+
     }
 }
