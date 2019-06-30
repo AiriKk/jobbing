@@ -5,12 +5,12 @@ public class Article {
     public String naiyou;
     public int icon;
 
-    public Article(String username, String naiyou, int icon){
+    public Article(String username, String naiyou, int icon) {
+
         this.username = username;
         this.naiyou = naiyou;
         this.icon = icon;
 
+
     }
 }
-
-
