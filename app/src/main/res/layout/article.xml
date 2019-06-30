@@ -65,15 +65,4 @@
             tools:layout_editor_absoluteX="80dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/miru"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="see"
-        android:text="開く"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Heart" />
-
 </android.support.constraint.ConstraintLayout>

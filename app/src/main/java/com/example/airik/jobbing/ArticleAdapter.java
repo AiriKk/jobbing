@@ -1,6 +1,7 @@
 package com.example.airik.jobbing;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,7 +59,14 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             viewHolder.heart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorAccent));
+                    if(item.isFavorite == false) {
+                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorAccent));
+                        item.isFavorite = true;
+                    }
+                    else{
+                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorIsNotFavorite));
+                        item.isFavorite = false;
+                    }
                 }
             });
         }
