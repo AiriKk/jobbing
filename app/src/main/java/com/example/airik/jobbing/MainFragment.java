@@ -1,9 +1,14 @@
 package com.example.airik.jobbing;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -11,18 +16,18 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainFragment extends Fragment {
     List<Article> mArticles;
     ArticleAdapter mArticleAdapter;
     ListView mListView;
 
-
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.activity_main, null);
 
-        mListView =(ListView)findViewById(R.id.listView);
+        mListView =(ListView)view.findViewById(R.id.listView);
         mArticles = new ArrayList<Article>();
 
         mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1), getString(R.string.shousai1), R.drawable.star));
@@ -30,20 +35,20 @@ public class MainActivity extends AppCompatActivity {
 //        mArticles.add(new Article(getString(R.string.user3), getString(R.string.naiyou3),R.drawable.ikemen));
 //        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1),R.drawable.star));
 
-        mArticleAdapter = new ArticleAdapter(this,R.layout.article,mArticles);
+        mArticleAdapter = new ArticleAdapter(getContext(),R.layout.article,mArticles);
         mListView.setAdapter(mArticleAdapter);
 
         //TODO ListViewのOnItemClickListenerを実装！
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String msg = position+1 + "番目の職業がクリックされました";
-                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), msg, Toast.LENGTH_LONG).show();
 
                 //選択されたデータを取り出す
                 Article article = mArticles.get(position);
 
                 //TODO 詳細画面を開く　
-                Intent intent = new Intent(MainActivity.this, ArticleOpenActivity.class);
+                Intent intent = new Intent(getActivity(), ArticleOpenActivity.class);
 
                 intent.putExtra("記事データ", article);
 
@@ -52,6 +57,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        return view;
     }
 }
