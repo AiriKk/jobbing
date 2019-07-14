@@ -60,7 +60,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
                 @Override
                 public void onClick(View view) {
                     if(item.isFavorite == false) {
-                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorAccent));
+                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorIsFavorite));
                         item.isFavorite = true;
                     }
                     else{
