@@ -46,6 +46,9 @@ public class TopActivity extends AppCompatActivity
         //右上のオプション
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //初期設定
+//        fragmentTransaction(new MainFragment());
     }
 
     //Top画面の切り替え
@@ -58,6 +61,10 @@ public class TopActivity extends AppCompatActivity
         if (id == R.id.nav_main) {
             // Handle the camera action
             fragmentTransaction(new MainFragment());
+        }else if (id == R.id.nav_profile){
+            fragmentTransaction(new ProfileFragment());
+
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

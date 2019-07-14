@@ -9,6 +9,11 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="メイン画面" />
 
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="プロフィール" />
+
     </group>
 
     <!--<item android:title="Communicate">-->
