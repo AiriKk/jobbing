@@ -48,7 +48,7 @@ public class TopActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //初期設定
-//        fragmentTransaction(new MainFragment());
+        fragmentTransaction(new MainFragment());
     }
 
     //Top画面の切り替え
@@ -65,7 +65,12 @@ public class TopActivity extends AppCompatActivity
             fragmentTransaction(new ProfileFragment());
 
 
+        }else if (id == R.id.nav_nyuuryoku){
+            fragmentTransaction(new NyuuryokuFragment());
+
+
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

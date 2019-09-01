@@ -29,8 +29,8 @@ public class MainFragment extends Fragment {
         mListView =(ListView)view.findViewById(R.id.listView);
         mArticles = new ArrayList<Article>();
 
-        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1), getString(R.string.shousai1), R.drawable.star));
-        mArticles.add(new Article(getString(R.string.user2), getString(R.string.naiyou2), getString(R.string.shousai2), R.drawable.umi));
+        mArticles.add(new Article(getString(R.string.user1), getString(R.string.title1), getString(R.string.honbun1), R.drawable.star));
+        mArticles.add(new Article(getString(R.string.user2), getString(R.string.title2), getString(R.string.honbun2), R.drawable.umi));
 //        mArticles.add(new Article(getString(R.string.user3), getString(R.string.naiyou3),R.drawable.ikemen));
 //        mArticles.add(new Article(getString(R.string.user1), getString(R.string.naiyou1),R.drawable.star));
 

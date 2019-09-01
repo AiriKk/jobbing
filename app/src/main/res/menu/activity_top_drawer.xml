@@ -7,12 +7,17 @@
         <item
             android:id="@+id/nav_main"
             android:icon="@drawable/ic_menu_camera"
-            android:title="メイン画面" />
+            android:title="ホーム" />
 
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_camera"
             android:title="プロフィール" />
+
+        <item
+            android:id="@+id/nav_nyuuryoku"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="記事を書く" />
 
     </group>
 
