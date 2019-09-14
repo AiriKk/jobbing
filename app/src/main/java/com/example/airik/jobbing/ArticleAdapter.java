@@ -1,7 +1,6 @@
 package com.example.airik.jobbing;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,7 +53,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         if(item !=null){
             //set data
             viewHolder.usernameT.setText(item.username);
-            viewHolder.naiyouT.setText(item.naiyou);
+            viewHolder.naiyouT.setText(item.title);
             viewHolder.iconIT.setImageResource(item.icon);
             viewHolder.heart.setOnClickListener(new View.OnClickListener() {
                 @Override

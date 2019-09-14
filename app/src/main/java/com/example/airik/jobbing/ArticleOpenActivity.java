@@ -21,7 +21,7 @@ public class ArticleOpenActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Article article = (Article) intent.getSerializableExtra("記事データ");
 
-        kijinonakami.setText(article.shousai);
+        kijinonakami.setText(article.honbun);
     }
 
     //TODO コメント昨日の追加　

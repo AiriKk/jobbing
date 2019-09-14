@@ -1,6 +1,7 @@
 package com.example.airik.jobbing;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -57,5 +58,11 @@ public class MainFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void lordArticle(){
+//        SharedPreferences pref= getActivity().getSharedPreferences("記事倉庫",getContext().MODE_PRIVATE);
+//       Article[] articles = pref.get("articles",null);
+
     }
 }

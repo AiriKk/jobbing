@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "441359641047",
+    "firebase_url": "https://jobbing-28927.firebaseio.com",
+    "project_id": "jobbing-28927",
+    "storage_bucket": "jobbing-28927.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441359641047:android:2357823c34300ccb",
+        "android_client_info": {
+          "package_name": "com.example.airik.jobbing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441359641047-e0h3j87k0np63tuqancfh3l0febrcqq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbT9cTz3dknQLXAyf6CsUipvkzMgE81NU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441359641047-e0h3j87k0np63tuqancfh3l0febrcqq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

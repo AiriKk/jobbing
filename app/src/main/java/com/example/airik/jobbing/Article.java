@@ -4,18 +4,18 @@ import java.io.Serializable;
 
 public class Article implements Serializable {
     public String username;
-    public String naiyou;
-    public String shousai;
+    public String title;
+    public String honbun;
 
     public int icon;
 
     public boolean isFavorite = false; //お気に入りにされているかどうか
 
-    public Article(String username,  String naiyou,String shousai,int icon) {
+    public Article(String username,  String title,String honbun,int icon) {
 
         this.username = username;
-        this.naiyou = naiyou;
-        this.shousai = shousai;
+        this.title = title;
+        this.honbun = honbun;
         this.icon = icon;
 
 
