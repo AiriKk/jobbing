@@ -7,9 +7,22 @@ public class Article implements Serializable {
     public String title;
     public String honbun;
 
-    public int icon;
+    public int icon = R.drawable.umi;
 
     public boolean isFavorite = false; //お気に入りにされているかどうか
+
+    public Article(){
+
+    }
+
+    public Article(String username,  String title,String honbun) {
+
+        this.username = username;
+        this.title = title;
+        this.honbun = honbun;
+
+
+    }
 
     public Article(String username,  String title,String honbun,int icon) {
 

@@ -6,12 +6,19 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +36,24 @@ public class MainFragment extends Fragment {
 
         mListView =(ListView)view.findViewById(R.id.listView);
         mArticles = new ArrayList<Article>();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference articleRef = database.getReference("articles");
+
+        articleRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot){
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    Article article = dataSnapshot.getValue(Article.class);
+                    mArticles.add(article);
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError error){
+                Log.w("Firebase","Failed to read value",error.toException());
+            }
+        });
+
 
         mArticles.add(new Article(getString(R.string.user1), getString(R.string.title1), getString(R.string.honbun1), R.drawable.star));
         mArticles.add(new Article(getString(R.string.user2), getString(R.string.title2), getString(R.string.honbun2), R.drawable.umi));
