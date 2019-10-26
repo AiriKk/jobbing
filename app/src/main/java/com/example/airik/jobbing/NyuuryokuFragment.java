@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class NyuuryokuFragment extends Fragment {
 
     TextView accountV;
@@ -36,7 +39,11 @@ public class NyuuryokuFragment extends Fragment {
                 String titleData = titleV.getText().toString();
                 String honbunData = honbunV.getText().toString();
 
-                Article newArticle = new Article(accountData,titleData,honbunData,0);
+                Article newArticle = new Article(accountData,titleData,honbunData,R.drawable.umi);
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference articlesRef = database.getReference("articles");
+                articlesRef.push().setValue(newArticle);
             }
         });
 

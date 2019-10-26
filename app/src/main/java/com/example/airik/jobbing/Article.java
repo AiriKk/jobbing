@@ -17,7 +17,7 @@ public class Article implements Serializable {
 
     public Article(String username,  String title,String honbun) {
 
-        this.username = username;
+        this.username = username; //usernameは自動で記事に登録されるように設定する！！
         this.title = title;
         this.honbun = honbun;
 

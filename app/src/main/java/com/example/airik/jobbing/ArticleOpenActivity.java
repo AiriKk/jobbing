@@ -24,9 +24,11 @@ public class ArticleOpenActivity extends AppCompatActivity {
         kijinonakami.setText(article.honbun);
     }
 
-    //TODO コメント昨日の追加　
+    //TODO コメント機能の追加　
     //TODO 好きな記事をアカウントに保存できるように　
     // TODO プロファイルのデータを変更を可能に　
     //TODO プロファイルの写真を変更を可能に　
     //TODO 検索機能を付け足す　
+    //TODO 記事表示時にユーザーネームの表示
+    //TODO 検索機能をつける
 }
