@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:441359641047:android:2357823c34300ccb",
         "android_client_info": {
-          "package_name": "com.example.airik.jobbing"
+          "package_name": "io.aiai.airik.jobbing"
         }
       },
       "oauth_client": [

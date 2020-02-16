@@ -1,4 +1,4 @@
-package com.example.airik.jobbing;
+package io.aiai.airik.jobbing;
 
 import org.junit.Test;
 

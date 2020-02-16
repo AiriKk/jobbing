@@ -1,4 +1,4 @@
-package com.example.airik.jobbing;
+package io.aiai.airik.jobbing;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.airik.jobbing", appContext.getPackageName());
+        assertEquals("io.aiai.airik.jobbing", appContext.getPackageName());
     }
 }

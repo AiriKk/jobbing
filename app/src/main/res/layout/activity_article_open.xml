@@ -26,22 +26,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="6"
             android:background="#c8caca"
             android:text="教師"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/okiniiri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="★"
-            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -52,8 +46,6 @@
         android:layout_margin="20dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/background_light"
@@ -69,8 +61,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:background="@drawable/circle"
             android:text="保存"
+            android:textColor="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -80,22 +73,24 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:background="@drawable/circle"
             android:text="コメント"
+            android:textColor="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/hozon" />
 
         <TextView
-            android:id="@+id/shokugyoumei"
+            android:id="@+id/usermei"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:text="教師"
+            android:layout_marginTop="16dp"
+            android:text="佐藤"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="32dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -103,11 +98,10 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toTopOf="@+id/komento"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shokugyoumei">
+            app:layout_constraintTop_toBottomOf="@+id/usermei">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,11 +116,22 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="教育をするお仕事ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
+                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/shokugyoumei" />
+                    app:layout_constraintTop_toBottomOf="@+id/usermei" />
             </LinearLayout>
         </ScrollView>
+
+        <ImageView
+            android:id="@+id/nenrei"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/usermei"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pochi" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.airik.jobbing"
+        applicationId "io.aiai.airik.jobbing"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -18,7 +18,7 @@ android {
     }
 }
 
-apply plugin:'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

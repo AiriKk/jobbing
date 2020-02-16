@@ -6,17 +6,17 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_main"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_home"
             android:title="ホーム" />
 
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_profile"
             android:title="プロフィール" />
 
         <item
             android:id="@+id/nav_nyuuryoku"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_write"
             android:title="記事を書く" />
 
     </group>

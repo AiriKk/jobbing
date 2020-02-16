@@ -1,4 +1,4 @@
-package com.example.airik.jobbing;
+package io.aiai.airik.jobbing;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
@@ -38,7 +38,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         final ViewHolder viewHolder;
         if (convertView == null){
             //articleレイアウト複製
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.article, null);
+            convertView = LayoutInflater.from(getContext()).inflate(io.aiai.airik.jobbing.R.layout.article, null);
             //viewHolderを用意
             viewHolder = new ViewHolder(convertView);
             //viewHolderをViewにタグ付け
@@ -54,20 +54,27 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             //set data
             viewHolder.usernameT.setText(item.username);
             viewHolder.naiyouT.setText(item.title);
-            viewHolder.iconIT.setImageResource(item.icon);
+            viewHolder.iconIT.setImageResource(io.aiai.airik.jobbing.R.drawable.hito);
             viewHolder.heart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if(item.isFavorite == false) {
-                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorIsFavorite));
+                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), io.aiai.airik.jobbing.R.color.colorIsFavorite));
                         item.isFavorite = true;
                     }
                     else{
-                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), R.color.colorIsNotFavorite));
+
+                        viewHolder.heart.getDrawable().setTint(ContextCompat.getColor(getContext(), io.aiai.airik.jobbing.R.color.colorIsNotFavorite));
                         item.isFavorite = false;
                     }
                 }
             });
+
+            if (item.ageA == 0) {
+                viewHolder.dott.getDrawable().setTint(ContextCompat.getColor(getContext(), io.aiai.airik.jobbing.R.color.colorStudent));
+            } else {
+                viewHolder.dott.getDrawable().setTint(ContextCompat.getColor(getContext(), io.aiai.airik.jobbing.R.color.colorAdult));
+            }
         }
 
         return convertView;
@@ -79,13 +86,15 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         TextView naiyouT;
         ImageView iconIT;
         public ImageView heart;
+        public ImageView dott;
 
         public ViewHolder(View view){
 
-            usernameT = (TextView)view.findViewById(R.id.username);
-            naiyouT = (TextView)view.findViewById(R.id.naiyou);
-            iconIT = (ImageView)view.findViewById(R.id.icon);
-            heart = (ImageView)view.findViewById(R.id.Heart);
+            usernameT = (TextView)view.findViewById(io.aiai.airik.jobbing.R.id.username);
+            naiyouT = (TextView)view.findViewById(io.aiai.airik.jobbing.R.id.naiyou);
+            iconIT = (ImageView)view.findViewById(io.aiai.airik.jobbing.R.id.icon);
+            heart = (ImageView)view.findViewById(io.aiai.airik.jobbing.R.id.Heart);
+            dott = (ImageView)view.findViewById(io.aiai.airik.jobbing.R.id.dot);
         }
 
     }
